@@ -13,35 +13,30 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Entity
 public class Despesa {
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	/*@ElementCollection(targetClass = TipoDespesa.class)
-	@CollectionTable(name = "tipoDespesa", joinColumns = @JoinColumn(name = "id"))
-	@Column(name = "tpDespesa", nullable = false)
-	@Enumerated(EnumType.STRING)
-	private Set<TipoDespesa> tipoDespesas = new HashSet<TipoDespesa>();*/
-
-	@NotEmpty
+	@NotEmpty(message="Nome não pode ser vazio")
 	private String nome;
-	
-	@NotNull
+
+	@NotNull(message="Valor não pode ser nulo")
 	private BigDecimal valor;
-	@NotEmpty
+	
 	@Lob
 	private String descricao;
-	
-	@DateTimeFormat(iso=ISO.DATE)
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@NotNull
 	private Calendar dataDespesa;
-	
-	@NotNull(message="Valor minimo deve ser 1")
+
+	@NotNull(message = "Valor minimo deve ser 1")
 	@Min(value = 1)
-	private int quantidade;
+	private Integer quantidade;
 
 	public Integer getId() {
 		return id;
@@ -83,11 +78,11 @@ public class Despesa {
 		this.dataDespesa = dataDespesa;
 	}
 
-	public int getQuantidade() {
+	public Integer getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
 
