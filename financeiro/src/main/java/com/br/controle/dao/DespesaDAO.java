@@ -1,7 +1,7 @@
 package com.br.controle.dao;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -12,10 +12,10 @@ import com.br.controle.model.Despesa;
 @Repository
 public interface DespesaDAO extends CrudRepository<Despesa, Integer> {
 	
-	@Query("select d from Despesa d where d.nome = :name")
-	public Despesa findByName(@Param("name") String name);
+	@Query("select d from Despesa d where d.id = :id")
+	public Despesa findById(@Param("id") Integer id);
 	
 	@Query("select d from Despesa d ")
-	public List<Despesa> findDespesas();
+	public Page<Despesa> findDespesas(Pageable pageable);
 
 }

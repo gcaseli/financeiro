@@ -12,14 +12,55 @@
 		<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
 	</definition>
 	
-	<definition name="cadastro/listar"  extends="main" >
-		<put-attribute name="titulo" value="Dulce Life"/>
-    	<put-attribute name="conteudo" value="/views/cadastro/listarCadastros.jsp"/>
-    </definition>
-    
+	
+	<!-- ##############	DESPESAS ############## -->
     <definition name="cadastro/despesa"  extends="main" >
 		<put-attribute name="titulo" value="Dulce Life"/>
-    	<put-attribute name="conteudo" value="/views/cadastro/cadastroDespesa.jsp"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/despesa/cadastroDespesa.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+    </definition>
+    
+    <definition name="cadastro/editar"  extends="main" >
+		<put-attribute name="titulo" value="Dulce Life"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/despesa/editarDespesa.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+    </definition>
+    
+    <definition name="cadastro/listar"  extends="main" >
+		<put-attribute name="titulo" value="Dulce Life"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/despesa/listarCadastros.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+    </definition>
+    
+    <!-- ##############	RECEITAS ############## -->
+    <definition name="receita/cadastro"  extends="main" >
+		<put-attribute name="titulo" value="Dulce Life"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/receita/cadastroReceita.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+    </definition>
+    
+    <definition name="receita/editar"  extends="main" >
+		<put-attribute name="titulo" value="Dulce Life"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/receita/editarReceita.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+    </definition>
+    
+    <definition name="receita/listar"  extends="main" >
+		<put-attribute name="titulo" value="Dulce Life"/>
+		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
+    	<put-attribute name="conteudo" value="/views/receita/listarReceitas.jsp"/>
+    	<put-attribute name="menu" value="/views/templates/menu.jsp"/>
+    	<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
     </definition>
     
     <!--  <definition name="registro" extends="main">

@@ -1,5 +1,1 @@
-<!-- 
-<div id="rodape" class="row">
-<p class="twelve columns"><b>Controle Financeiro</b> - Desenvolvido por Guilherme Caseli<br/></p>
-</div>
--->
+<footer><strong>Sistema de controle financeiro da Dulce Life</strong></footer>

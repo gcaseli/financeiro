@@ -86,4 +86,20 @@ public class Despesa {
 		this.quantidade = quantidade;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(this==null)
+			return true;
+		
+		if(id==null || obj == null || getClass() != obj.getClass())
+			return false;
+		
+		Despesa despesa = (Despesa) obj;
+		return id.equals(despesa.getId());
+	}
+	
+	@Override
+	public int hashCode() {
+		return id == null ? 0 : id.hashCode();
+	}
 }
